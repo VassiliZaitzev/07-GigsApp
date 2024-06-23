@@ -12,4 +12,13 @@
     </button>
   </div>
 
+  <div *ngIf="tags.length >0" class="list-group list-reset mt-2">
+    <button
+      class="btn btn-danger"
+      (click)="deleteTags()"
+    >
+      Eliminar historial
+    </button>
+  </div>
+
 </div>

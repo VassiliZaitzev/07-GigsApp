@@ -43,6 +43,16 @@ export class GifsService {
     this.searchTag(this._tagsHistory[0]);
   }
 
+  private deleteTags(){
+    localStorage.removeItem('History');
+    this._tagsHistory = [];
+    this.gifList = [];
+  }
+
+  deleteTagFunction(){
+    this.deleteTags();
+  }
+
   searchTag(tag:string):void{
     if (!tag) return;
     this.organizeHistory(tag);
